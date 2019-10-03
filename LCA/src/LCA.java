@@ -316,4 +316,11 @@ public class LCA<Key extends Comparable<Key>, Value>
     	
     	return max(x.right);
     }
+    
+    //I got all of this code from a project that I did last year
+    
+    public Key lca(Node node, Key key1, Key key2) {
+    	return null;
+    }
+    
 }
