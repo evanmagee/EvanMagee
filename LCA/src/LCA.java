@@ -27,7 +27,44 @@ public class LCA<Key extends Comparable<Key>, Value>
     //I got this constructor from a project that I did last year.
     
     public Key lca(Node node, Key key1, Key key2) {
-    	return null;
+    	if (node == null)
+
+            return null;
+
+		if (node.key == key1) {
+
+			return node.key;
+
+		}
+
+		if (node.key == key2) {
+
+			return node.key;
+
+		}
+
+		int cmp = node.key.compareTo(key1);
+
+		int cmp1 = node.key.compareTo(key2);
+
+		
+
+        if (cmp >= 0 && cmp1 >= 0)
+
+            return lca(node.left, key1, key2);
+
+  
+
+        if (cmp <= 0 && cmp1 <= 0)
+
+            return lca(node.right, key1, key2);
+
+  
+
+        return node.key;
+
     }
+    // I used www.geeksforgeeks.org to help me with this code
+    
     
 }
