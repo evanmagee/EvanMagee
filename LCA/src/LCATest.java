@@ -53,8 +53,30 @@ LCA<Integer, Integer> lca = new LCA<Integer, Integer>();
 	//renamed parameters to make relevant for LCA
 	@Test
 	public void testDelete() {
-		
+ LCA<Integer, Integer> lca = new LCA<Integer, Integer>();
+         
+         lca.delete(1);
+         assertEquals("Deleting from empty tree", "()", lca.printKeysInOrder());
+         
+         lca.put(7, 7);   
+         lca.put(8, 8);   
+         lca.put(3, 3);   
+         lca.put(1, 1);  
+         lca.put(2, 2);  
+         lca.put(6, 6);   
+         lca.put(4, 4);   
+         lca.put(5, 5);  
+                          
+         
+         assertEquals("Checking order of the tree", "(((()1(()2()))3((()4(()5()))6()))7(()8()))", lca.printKeysInOrder());
+         
+         lca.delete(9);
+         assertEquals("Deleting key that isn't there", "(((()1(()2()))3((()4(()5()))6()))7(()8()))", lca.printKeysInOrder());
+ 
+         lca.delete(8);
+         assertEquals("Deleting leaf", "(((()1(()2()))3((()4(()5()))6()))7())", lca.printKeysInOrder());
 	}
 	
+	//Added delete test
 	
 }
