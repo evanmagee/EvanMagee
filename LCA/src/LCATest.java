@@ -7,9 +7,37 @@ class LCATest {
 
 	@Test
 	public void testLCA() {
+		LCA<Integer, Integer> lca = new LCA<Integer, Integer>();
+		lca.put(2, 2); 	    
+		lca.put(3, 3);       
+		lca.put(4, 4);      
+		lca.put(5, 5);      
+		lca.put(6, 6);       
+		lca.put(7, 7);       
+		lca.put(8, 8); 
+		lca.put(9,9);
+							//        _2_
+							
+							//      /     \
+							
+							//    _4_      3
+							
+							//  /     \
+							
+							// 5       7
+							
+							//  \     /
+							
+							//   6   8
+							
+							//        \
+						
+							//			9
+
+		
 		
 	}
-
+	
 	
 	@Test
 	public void testSize() {
