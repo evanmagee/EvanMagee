@@ -32,24 +32,25 @@ class LCATest {
 	
 	@Test
 	public void testPut() {
-LCA<Integer, Integer> bst = new LCA<Integer, Integer>();
+LCA<Integer, Integer> lca = new LCA<Integer, Integer>();
 		
-		bst.put(5, null);
-		bst.put(7, 7);
-		bst.put(8, 8);     
-		bst.put(3, 3);       
-		bst.put(1, 1);      
-		bst.put(2, 2);      
-		bst.put(6, 6);       
-		bst.put(4, 4);       
-		bst.put(5, 5); 
-		bst.put(5, 5); 
+		lca.put(5, null);
+		lca.put(7, 7);
+		lca.put(8, 8);     
+		lca.put(3, 3);       
+		lca.put(1, 1);      
+		lca.put(2, 2);      
+		lca.put(6, 6);       
+		lca.put(4, 4);       
+		lca.put(5, 5); 
+		lca.put(5, 5); 
 		
-		assertEquals("(((()1(()2()))3((()4(()5()))6()))7(()8()))", bst.printKeysInOrder());
+		assertEquals("(((()1(()2()))3((()4(()5()))6()))7(()8()))", lca.printKeysInOrder());
 		
 	}
 	
 	//Used the same project from last year to get this test
+	//renamed parameters to make relevant for LCA
 	@Test
 	public void testDelete() {
 		
