@@ -1,4 +1,5 @@
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertSame;
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
@@ -8,31 +9,33 @@ class LCATest {
 	@Test
 	public void testLCA() {
 		LCA<Integer, Integer> lca = new LCA<Integer, Integer>();
-		lca.put(2, 2); 	    
-		lca.put(3, 3);       
+		lca.put(6,6); 	    
+		lca.put(7,7);       
 		lca.put(4, 4);      
 		lca.put(5, 5);      
-		lca.put(6, 6);       
-		lca.put(7, 7);       
+		lca.put(2, 2);       
+		lca.put(3, 3);       
 		lca.put(8, 8); 
-		lca.put(9,9);
-							//        _2_
+		
+							//        _6_
 							
 							//      /     \
 							
-							//    _4_      3
+							//    _4_      7
 							
-							//  /     \
+							//  /     \      \
 							
-							// 5       7
+							// 2      5       8
 							
-							//  \     /
+							//  \     
 							
-							//   6   8
+							//   3   
 							
-							//        \
+							
 						
-							//			9
+							
+
+		// had to fix bst
 
 		
 		

@@ -11,7 +11,7 @@ import java.util.NoSuchElementException;
 public class LCA<Key extends Comparable<Key>, Value> 
 {
   
-	 private Node root;             // root of BST
+	  Node root;             // root of BST
 	    private String stringOutput = "";
 	    private String multiLineOutput = "";
 	    private String prefix = "";
