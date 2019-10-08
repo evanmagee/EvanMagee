@@ -35,7 +35,13 @@ class LCATest {
 						
 							
 
-		// had to fix bst
+		assertSame("Testing LCA left side", 4, lca.lca(lca.root, 3,5));
+
+		assertSame("Testing LCA right side", 6, lca.lca(lca.root, 4,8));
+
+		assertSame("Testing LCA where LCA is one of the nodes", 7, lca.lca(lca.root, 7,8));
+
+	
 
 		
 		
