@@ -11,6 +11,16 @@ public class DAG {
 			
 		}
 		
+		public boolean isEmpty() {
+			return false;
+			
+		}
+		
+		public int size() {
+			return 0;
+		}
+		
+		
 		public int V() {
 			return V;
 			//returns number of vertices
