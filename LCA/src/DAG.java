@@ -32,7 +32,13 @@ public class DAG {
 		}
 		
 		public void addEdge(int v, int w) {
-			
+			if(validateVertex(v) ==1 && validateVertex(w)==1) {
+				adj[v].add(w);
+				E++;
+			}
+			else {
+				System.out.println("Please enter valid vertices");
+			}
 		}
 		
 		public Iterable<Integer> adj(int v){
