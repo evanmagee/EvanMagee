@@ -36,7 +36,7 @@ public class DAG {
 		}
 		
 		public Iterable<Integer> adj(int v){
-			return null;
+			return adj[v];
 			//finds vertics that are adjacent
 		}
 		
