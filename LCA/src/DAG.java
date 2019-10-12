@@ -5,7 +5,7 @@ public class DAG {
 		private int V;
 		private int E;
 		private ArrayList<Integer>[] adj;
-	
+		private int[]indegree; // gives the indegree of a vertex
 	
 		public DAG(int V) {
 			
@@ -35,6 +35,7 @@ public class DAG {
 			if(validateVertex(v) ==1 && validateVertex(w)==1) {
 				adj[v].add(w);
 				E++;
+				indegree[w]++;
 			}
 			else {
 				System.out.println("Please enter valid vertices");
@@ -61,9 +62,20 @@ public class DAG {
 		        	return 1;
 		        }
 		}
-
-
+		
+		public int indegree(int v) {
+			if(validateVertex(v)==-1) {
+				return -1;
+			}
+			else {
+				return indegree(v);
+			}
 		}
+		
+					
+}
+
+		
 		
 	
 	
