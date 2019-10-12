@@ -45,6 +45,20 @@ public class DAG {
 			///returns DAG in reverse order
 		}
 		
+		private int validateVertex(int v) { // this function makes sure that a given vertex is possible 
+			 if (v < 0 || v >= V) {
+
+		        	return -1;
+			 }
+		        else {
+
+		        	return 1;
+		        }
+		}
+
+
+		}
+		
 	
 	
-}
+
