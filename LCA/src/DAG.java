@@ -7,7 +7,7 @@ public class DAG {
 		private ArrayList<Integer>[] adj;
 		private int[]indegree; // gives the indegree of a vertex
 		private int[] outdegree; // gives outdegree
-		
+		private boolean hasCycle; //Returns true if there is a cycle in the graph
 		
 		public DAG(int V) {
 			if(V>=0) {
@@ -28,6 +28,15 @@ public class DAG {
 				
 				
 				
+		}
+		
+		
+		public boolean hasCycle() {
+			return hasCycle;
+		}
+		
+		public void findCycle(int v) {
+			
 		}
 		
 		public boolean isEmpty() {
