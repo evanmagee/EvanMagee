@@ -105,6 +105,15 @@ public class DAG {
 			
 		}
 		
+		public int outdegree(int v) {
+			if(validateVertex(v)==-1) {
+				return -1;
+			}
+			else {
+				return adj[v].size();
+			}
+		}
+		
 					
 }
 
