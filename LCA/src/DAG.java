@@ -6,7 +6,9 @@ public class DAG {
 		private int E;
 		private ArrayList<Integer>[] adj;
 		private int[]indegree; // gives the indegree of a vertex
-	
+		private int[] outdegree; // gives outdegree
+		
+		
 		public DAG(int V) {
 			
 		}
@@ -47,9 +49,21 @@ public class DAG {
 			//finds vertics that are adjacent
 		}
 		
-		public DAG reverse() {
-			return null;
-			///returns DAG in reverse order
+		public DAG reverse() { // returns DAG in reverse order
+			DAG reverse = new DAG(V);
+			for (int v = 0; v < V; v++) {
+	            for (int w : adj(v)) {
+
+	                reverse.addEdge(w, v); 
+
+	            }
+
+	        }
+
+	        return reverse;
+
+			
+			
 		}
 		
 		private int validateVertex(int v) { // this function makes sure that a given vertex is possible 
@@ -70,6 +84,8 @@ public class DAG {
 			else {
 				return indegree(v);
 			}
+			
+			
 		}
 		
 					
