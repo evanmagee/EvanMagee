@@ -39,6 +39,14 @@ public class DAG {
 			
 		}
 		
+		public void BFS() {
+			
+		}
+		
+		public int LCA(int v, int w) {
+			return 0;
+		}
+		
 		public boolean isEmpty() {
 			return false;
 			
