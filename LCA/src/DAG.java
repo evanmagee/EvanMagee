@@ -10,7 +10,24 @@ public class DAG {
 		
 		
 		public DAG(int V) {
-			
+			if(V>=0) {
+				this.V = V;
+				this.E = 0;
+				indegree = new int[V];
+				adj = (ArrayList<Integer>[]) new ArrayList[V];
+
+			    for (int v = 0; v < V; v++) {
+
+			        adj[v] = new ArrayList<Integer>();
+
+			    }              
+			}
+			else {
+				System.out.println("Number of vertices must be a positive number");
+			}
+				
+				
+				
 		}
 		
 		public boolean isEmpty() {
