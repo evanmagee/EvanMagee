@@ -22,5 +22,15 @@ class DAGTest {
 		//this shouldnt add an edge
 		assertEquals("Number of edges should be 3",3,tester.E());
 	}
+	
+	@Test
+	
+	public void testHasCycle() {
+		DAG tester = new DAG(6);
+		tester.addEdge(1,2);
+		tester.addEdge(2,3);
+		tester.addEdge(3,1);
+		assertTrue(tester.hasCycle());
+	}
 
 }
