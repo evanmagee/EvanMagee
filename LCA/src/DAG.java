@@ -49,14 +49,14 @@ public class DAG {
 
 		        stack[v] = true;
 
-		        for (int w : adj(v)) {
+		        for (int w=0;w<E; adj(v)) {
 
-		            if(marked[w]) {
+		            if(marked[w] = true) {
 
 		                findCycle(w);
 
 		            } 
-		            else if (!stack[w]) {
+		            else if (stack[w] = false) {
 
 		                hasCycle = true;
 
