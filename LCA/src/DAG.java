@@ -190,7 +190,7 @@ public class DAG {
 		}
 		
 		public int indegree(int v) {
-			if(validateVertex(v)==-1) {
+			if(validateVertex(v)<0) {
 				return -1;
 			}
 			else {
@@ -201,7 +201,7 @@ public class DAG {
 		}
 		
 		public int outdegree(int v) {
-			if(validateVertex(v)==-1) {
+			if(validateVertex(v)<0) {
 				return -1;
 			}
 			else {
