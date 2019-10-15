@@ -146,10 +146,10 @@ public class DAG {
 		}
 		
 		public void addEdge(int v, int w) {
-			if(validateVertex(v) ==1 && validateVertex(w)==1) {
+			if((validateVertex(v) == 1)  && (validateVertex(w) == 1)) {
 				adj[v].add(w);
-				E++;
 				indegree[w]++;
+				E++;
 			}
 			else {
 				System.out.println("Please enter valid vertices");
@@ -190,11 +190,11 @@ public class DAG {
 		}
 		
 		public int indegree(int v) {
-			if(validateVertex(v)<0) {
+			if(validateVertex(v)==-1) {
 				return -1;
 			}
 			else {
-				return indegree(v);
+				return indegree[v];
 			}
 			
 			

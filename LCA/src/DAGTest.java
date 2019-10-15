@@ -7,6 +7,25 @@ class DAGTest {
 
 	@Test
 	
+	public void testDAGConstructor() {
+		DAG tester = new DAG(12);
+		tester.addEdge(1, 2);	
+		tester.addEdge(2, 3);	
+		tester.addEdge(2, 4);
+		tester.addEdge(4, 5);
+		tester.addEdge(5, 6);
+		tester.addEdge(5, 7);
+		
+		
+		
+		assertEquals("", 6, tester.E());
+		assertEquals("",12,tester.V());
+		assertEquals("",1,tester.outdegree(4));
+		assertEquals("",1,tester.indegree(4));
+		
+	}
+	@Test
+	
 	public void testAddEdge() {
 		DAG tester = new DAG (6);
 		tester.addEdge(2,3);
@@ -33,22 +52,4 @@ class DAGTest {
 		assertTrue(tester.hasCycle());
 	}
 	
-	@Test
-	
-	public void testDAGConstructor() {
-		DAG tester = new DAG(10);
-		tester.addEdge(1,2);
-		tester.addEdge(2,3);
-		tester.addEdge(2,4);
-		tester.addEdge(4,5);
-		tester.addEdge(5,6);
-	
-		
-		assertEquals(" ", 1 , tester.indegree(3));
-//		assertEquals("",2, tester.outdegree(2));
-//		assertEquals("",2,tester.indegree(2));
-//		assertEquals("",12,tester.V());
-//		assertEquals("",6,tester.E());
-		
-	}
 }
