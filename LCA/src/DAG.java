@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.LinkedList;
 
 public class DAG {
 
@@ -70,8 +72,53 @@ public class DAG {
 		    }
 
 			
-		public void BFS() {
+		public ArrayList<Integer> BFS(int x) { // got this code from algorithms & data structures from last year
+			 
 			
+			boolean visited[] = new boolean[V];
+
+
+		        LinkedList<Integer> queue = new LinkedList<Integer>();
+
+		        ArrayList<Integer> order= new ArrayList<Integer>();
+
+		 
+
+		        visited[x]=true;
+
+		        queue.add(x);
+		        while (queue.size() != 0)
+
+		        {
+		            x = queue.poll();           
+		            order.add(x);
+		            Iterator<Integer> i = adj[x].listIterator();
+		            while (i.hasNext())
+
+		            {
+
+		                int n = i.next();
+
+		                if (!visited[n])
+
+		                {
+
+		                    visited[n] = true;
+
+		                    queue.add(n);
+
+		                }
+
+		            }
+
+		        }
+
+		        
+
+		        return order;
+
+		        
+
 		}
 		
 		public int LCA(int v, int w) {
