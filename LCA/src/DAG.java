@@ -8,12 +8,18 @@ public class DAG {
 		private int[]indegree; // gives the indegree of a vertex
 		private int[] outdegree; // gives outdegree
 		private boolean hasCycle; //Returns true if there is a cycle in the graph
+		private boolean marked[];
+		private boolean stack[];
+		
+		
 		
 		public DAG(int V) {
 			if(V>=0) {
 				this.V = V;
 				this.E = 0;
 				indegree = new int[V];
+				marked = new boolean[V];
+			    stack = new boolean[V];
 				adj = (ArrayList<Integer>[]) new ArrayList[V];
 
 			    for (int v = 0; v < V; v++) {
@@ -37,8 +43,33 @@ public class DAG {
 		
 		public void findCycle(int v) {
 			
-		}
-		
+			marked[v] = true;
+
+		        stack[v] = true;
+
+		        for (int w : adj(v)) {
+
+		            if(!marked[w]) {
+
+		                findCycle(w);
+
+		            } 
+		            else if (stack[w]) {
+
+		                hasCycle = true;
+
+		                return;
+
+		            }
+
+		        }
+
+
+		        stack[v] = false;
+
+		    }
+
+			
 		public void BFS() {
 			
 		}
