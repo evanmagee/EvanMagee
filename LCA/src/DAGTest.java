@@ -74,6 +74,9 @@ class DAGTest {
 		lcaTest.addEdge(5,6);
 		
 		assertEquals("LCA for 4 and 5", 3, lcaTest.LCA(4,5));
+		assertEquals("LCA for 1 and 2",0,lcaTest.LCA(1,2));
+		assertEquals("LCA for 6 and 4",4,lcaTest.LCA(4,6));
+		assertEquals("LCA for 4 and 1",1,lcaTest.LCA(4,1));
 		
 		
 //		
