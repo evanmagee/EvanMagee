@@ -76,43 +76,7 @@ class DAGTest {
 		assertEquals("LCA for 4 and 5", 3, lcaTest.LCA(4,5));
 		
 		
-//		DAG lca = new DAG(10);
-//
-//
-//
-//		//--------2---5----7--
-//
-//		//---0--1-------6----8
-//
-//		//--------3---4-------
-//
-//		lca.addEdge(0, 1);
-//
-//		lca.addEdge(1, 2);
-//
-//		lca.addEdge(1, 3);
-//
-//		lca.addEdge(2, 5);
-//
-//		lca.addEdge(3, 4);
-//
-//		lca.addEdge(4, 6);
-//
-//		lca.addEdge(5, 6);
-//
-//		lca.addEdge(6, 8);
-//
-//		lca.addEdge(5, 7);
-//
-//		lca.addEdge(7, 8);
-//
-//		lca.addEdge(8, 9);
-//
-//
-//
-//		assertEquals("Finding LCA for 4 and 5", 1, lca.LCA(5, 4));
-//		assertEquals("Finding LCA for 7 and 8", 7, lca.LCA(8, 7));
-//		assertEquals("Finding LCA for 6 and 8", 6, lca.LCA(6, 8));
+//		
 	}
 	
 	
