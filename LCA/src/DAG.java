@@ -123,8 +123,11 @@ public class DAG {
 			if(hasCycle()) {
 				return -1; 
 			}
-			ArrayList<Integer> pathofV = BFS(v);
-			ArrayList<Integer> pathofW = BFS(w);
+			
+			DAG reverse = reverse();
+
+			ArrayList<Integer> pathofV = reverse.BFS(v);
+			ArrayList<Integer> pathofW = reverse.BFS(w);
 			ArrayList<Integer> mutuals = new ArrayList<Integer>();
 			boolean found = false;
 			for(int i = 0; i<pathofV.size(); i++){
