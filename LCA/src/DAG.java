@@ -44,32 +44,28 @@ public class DAG {
 		}
 		
 		public void findCycle(int v) {
-			
-			marked[v] = true;
 
-		        stack[v] = true;
+	        marked[v] = true;
+	        stack[v] = true;
+	        for (int w : adj(v)) {
+	            if(marked[w]=false) {
 
-		        for (int w=0;w<E; adj(v)) {
+	                findCycle(w);
 
-		            if(marked[w] = true) {
+	            } else if (stack[w]=true) {
 
-		                findCycle(w);
+	                hasCycle = true;
 
-		            } 
-		            else if (stack[w] = false) {
+	                return;
 
-		                hasCycle = true;
+	            }
 
-		                return;
-
-		            }
-
-		        }
+	        }
 
 
-		        stack[v] = false;
+	        stack[v] = false;
 
-		    }
+	    }
 
 			
 		public ArrayList<Integer> BFS(int x) { // got this code from algorithms & data structures from last year
