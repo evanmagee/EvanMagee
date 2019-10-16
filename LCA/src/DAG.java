@@ -118,7 +118,33 @@ public class DAG {
 		}
 		
 		public int LCA(int v, int w) {
-			return 0;
+			
+			
+			if(hasCycle()) {
+				return -1; 
+			}
+			ArrayList<Integer> pathofV = BFS(v);
+			ArrayList<Integer> pathofW = BFS(w);
+			ArrayList<Integer> mutuals = new ArrayList<Integer>();
+			boolean found = false;
+			for(int i = 0; i<pathofV.size(); i++){
+
+				for(int j = 0; j<pathofW.size(); j++){
+					if(pathofV.get(i)==pathofW.get(j)) {
+						mutuals.add(i);
+						found=true;
+					}
+				}
+			}
+			if(found) {
+				
+				return mutuals.get(0);
+			}
+			else {
+				return -1;
+			}
+			
+			
 		}
 		
 		public boolean isEmpty() {
