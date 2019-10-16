@@ -134,7 +134,7 @@ public class DAG {
 
 				for(int j = 0; j<pathofW.size(); j++){
 					if(pathofV.get(i)==pathofW.get(j)) {
-						mutuals.add(i);
+						mutuals.add(pathofV.get(i));
 						found=true;
 					}
 				}
