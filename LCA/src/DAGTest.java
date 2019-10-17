@@ -101,5 +101,34 @@ class DAGTest {
 		
 	}
 	
+	@Test
+	
+	public void testIfNoCommonAncestor() {
+		DAG noCommonAncestor = new DAG(8);
+		noCommonAncestor.addEdge(0,1);
+		noCommonAncestor.addEdge(0,2);
+		noCommonAncestor.addEdge(1,3);
+		noCommonAncestor.addEdge(2,3);
+		noCommonAncestor.addEdge(3,4);
+		noCommonAncestor.addEdge(3,5);
+		noCommonAncestor.addEdge(4,6);
+		noCommonAncestor.addEdge(5,6);
+		
+		
+		
+		assertEquals("Find LCA for node that doesn't exist", -1, noCommonAncestor.LCA(7,2));
+		assertEquals("Find LCA for node that doesn't exist",-1,noCommonAncestor.LCA(4,7));
+		
+		
+//		
+	}
+	
+	@Test
+	
+	public void testIfLCAEmpty() {
+		DAG emptyDAG = new DAG(8);
+		assertEquals("LCA should be -1",-1,emptyDAG.LCA(1,2));
+	}
+	
 	
 }
