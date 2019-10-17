@@ -118,9 +118,9 @@ public class DAG {
 		}
 		
 		public int LCA(int v, int w) {
+			findCycle(0);
 			
-			
-			if(hasCycle()) {
+			if(hasCycle) {
 				return -1; 
 			}
 			

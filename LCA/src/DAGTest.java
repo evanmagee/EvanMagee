@@ -82,5 +82,24 @@ class DAGTest {
 //		
 	}
 	
+	@Test
+	
+	public void testIfNotADAG() {
+		DAG nonDAG = new DAG(8);
+		nonDAG.addEdge(0,1);
+		nonDAG.addEdge(1,2);
+		nonDAG.addEdge(2,3);
+		nonDAG.addEdge(3,1);
+		
+		
+		assertEquals("",-1,nonDAG.LCA(2,3));
+		assertEquals("",-1,nonDAG.LCA(1,3));
+		assertEquals("",-1,nonDAG.LCA(3,1));
+		
+//		
+
+		
+	}
+	
 	
 }
